@@ -6,4 +6,5 @@
 看到对方交技能后点击对应技能，自动计算CD并复制到粘贴板，可在游戏中CTRL+V告知队友
 
 点击重置可清空文本和计时
+
 ![Instructions](img.png?raw=true)

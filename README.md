@@ -8,3 +8,13 @@
 点击重置可清空文本和计时
 
 ![Instructions](img.png?raw=true)
+
+打包命令：
+```python
+pyinstaller -w -F -c 召唤师技能计时器.pyw  --hidden-import PySide2.QtXml
+```
+
+## 2020年3月29日更新：
+增加更多的召唤师技能
+
+打包了一个.exe文件

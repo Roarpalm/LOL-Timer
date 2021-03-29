@@ -29,6 +29,10 @@ class GUI():
         self.window.Btn13.clicked.connect(self.btn13)
         self.window.Btn14.clicked.connect(self.btn14)
         self.window.Btn15.clicked.connect(self.btn15)
+        self.window.Btn16.clicked.connect(self.btn16)
+        self.window.Btn17.clicked.connect(self.btn17)
+        self.window.Btn18.clicked.connect(self.btn18)
+        self.window.Btn19.clicked.connect(self.btn19)
 
     def btn1(self):
         s = "上单闪现" + self.time_to_str(int(self.now) + 300)
@@ -54,6 +58,14 @@ class GUI():
         else:
             self.window.top_txt.setText(s + " " + t)
         self.copy_txt()
+    def btn16(self):
+        s = "上单疾跑" + self.time_to_str(int(self.now) + 180)
+        t = self.window.top_txt.text()
+        if "上单疾跑" in t:
+            self.window.top_txt.setText(re.sub("上单疾跑[0-9]{2}:[0-9]{2}", s, t))
+        else:
+            self.window.top_txt.setText(s + " " + t)
+        self.copy_txt()
     def btn4(self):
         s = "打野闪现" + self.time_to_str(int(self.now) + 300)
         t = self.window.jug_txt.text()
@@ -63,18 +75,18 @@ class GUI():
             self.window.jug_txt.setText(s + " " + t)
         self.copy_txt()
     def btn5(self):
-        s = "打野疾跑" + self.time_to_str(int(self.now) + 180)
-        t = self.window.jug_txt.text()
-        if "打野疾跑" in t:
-            self.window.jug_txt.setText(re.sub("打野疾跑[0-9]{2}:[0-9]{2}", s, t))
-        else:
-            self.window.jug_txt.setText(s + " " + t)
-        self.copy_txt()
-    def btn6(self):
         s = "打野点燃" + self.time_to_str(int(self.now) + 210)
         t = self.window.jug_txt.text()
         if "打野点燃" in t:
             self.window.jug_txt.setText(re.sub("打野点燃[0-9]{2}:[0-9]{2}", s, t))
+        else:
+            self.window.jug_txt.setText(s + " " + t)
+        self.copy_txt()
+    def btn6(self):
+        s = "打野疾跑" + self.time_to_str(int(self.now) + 180)
+        t = self.window.jug_txt.text()
+        if "打野疾跑" in t:
+            self.window.jug_txt.setText(re.sub("打野疾跑[0-9]{2}:[0-9]{2}", s, t))
         else:
             self.window.jug_txt.setText(s + " " + t)
         self.copy_txt()
@@ -102,6 +114,14 @@ class GUI():
         else:
             self.window.mid_txt.setText(s + " " + t)
         self.copy_txt()
+    def btn17(self):
+        s = "中单净化" + self.time_to_str(int(self.now) + 210)
+        t = self.window.mid_txt.text()
+        if "中单净化" in t:
+            self.window.mid_txt.setText(re.sub("中单净化[0-9]{2}:[0-9]{2}", s, t))
+        else:
+            self.window.mid_txt.setText(s + " " + t)
+        self.copy_txt()
     def btn10(self):
         s = "ADC闪现" + self.time_to_str(int(self.now) + 300)
         t = self.window.adc_txt.text()
@@ -126,6 +146,14 @@ class GUI():
         else:
             self.window.adc_txt.setText(s + " " + t)
         self.copy_txt()
+    def btn18(self):
+        s = "ADC屏障" + self.time_to_str(int(self.now) + 180)
+        t = self.window.adc_txt.text()
+        if "ADC屏障" in t:
+            self.window.adc_txt.setText(re.sub("ADC屏障[0-9]{2}:[0-9]{2}", s, t))
+        else:
+            self.window.adc_txt.setText(s + " " + t)
+        self.copy_txt()
     def btn13(self):
         s = "辅助闪现" + self.time_to_str(int(self.now) + 300)
         t = self.window.sup_txt.text()
@@ -147,6 +175,14 @@ class GUI():
         t = self.window.sup_txt.text()
         if "辅助虚弱" in t:
             self.window.sup_txt.setText(re.sub("辅助虚弱[0-9]{2}:[0-9]{2}", s, t))
+        else:
+            self.window.sup_txt.setText(s + " " + t)
+        self.copy_txt()
+    def btn19(self):
+        s = "辅助治疗" + self.time_to_str(int(self.now) + 270)
+        t = self.window.sup_txt.text()
+        if "辅助治疗" in t:
+            self.window.sup_txt.setText(re.sub("辅助治疗[0-9]{2}:[0-9]{2}", s, t))
         else:
             self.window.sup_txt.setText(s + " " + t)
         self.copy_txt()
